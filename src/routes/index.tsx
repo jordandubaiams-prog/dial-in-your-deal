@@ -39,6 +39,7 @@ function Index() {
     <main className="min-h-screen text-foreground">
       <TopBar />
       <Hero />
+      <SocialProof />
       <Guarantee />
       <HowItWorks />
       <ForWho />
