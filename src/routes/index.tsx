@@ -177,6 +177,32 @@ function CTAButton({ children }: { children: React.ReactNode }) {
   );
 }
 
+function SocialProof() {
+  const stats = [
+    { n: "82%", l: "Of trainees pass their first challenge after applying the framework" },
+    { n: "$2.4M+", l: "In combined funded capital pulled by our community last year" },
+    { n: "100%", l: "Legal risk arbitrage between prop firms and your broker account" },
+  ];
+  return (
+    <section className="px-6 py-10 sm:py-14 border-t border-border/40">
+      <div className="mx-auto max-w-5xl">
+        <div className="grid gap-8 sm:grid-cols-3 text-center">
+          {stats.map((s) => (
+            <div key={s.n} className="space-y-2">
+              <div className="font-display text-5xl sm:text-6xl text-gradient-gold font-semibold">
+                {s.n}
+              </div>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-xs mx-auto">
+                {s.l}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Guarantee() {
   return (
     <section className="px-6 pb-4">
