@@ -1,29 +1,279 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
+
+const CALENDLY_URL = "https://calendly.com/your-handle/strategy-call";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Pass Any Prop Firm Challenge — Funded Trader Blueprint" },
+      {
+        name: "description",
+        content:
+          "The exact system traders use to pass evaluations and pull consistent payouts from prop firms. Watch the free training, then book your implementation call.",
+      },
+      { property: "og:title", content: "Pass Any Prop Firm Challenge — Funded Trader Blueprint" },
+      {
+        property: "og:description",
+        content:
+          "Watch the free training, then book your implementation call with our team.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+    ],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap",
+      },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <main className="min-h-screen text-foreground">
+      <TopBar />
+      <Hero />
+      <ForWho />
+      <Outcomes />
+      <FinalCTA />
+      <Footer />
+    </main>
+  );
+}
+
+function TopBar() {
+  return (
+    <header className="border-b border-border/40 bg-navy-deep/70 backdrop-blur-md sticky top-0 z-40">
+      <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
+        <div className="flex items-center gap-2">
+          <div className="size-7 rounded-md bg-gradient-to-br from-gold to-gold-bright shadow-gold" />
+          <span className="font-display text-xl tracking-tight">Funded Blueprint</span>
+        </div>
+        <a
+          href="#book"
+          className="hidden sm:inline-flex items-center text-sm font-medium text-gold hover:text-gold-bright transition-colors"
+        >
+          Book a call →
+        </a>
+      </div>
+    </header>
+  );
+}
+
+function Hero() {
+  return (
+    <section className="relative px-6 pt-14 pb-20 sm:pt-20">
+      <div className="mx-auto max-w-4xl text-center animate-fade-up">
+        <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-gold">
+          <span className="size-1.5 rounded-full bg-gold animate-pulse" />
+          Free Trader Training — 2026
+        </div>
+
+        <h1 className="mt-7 font-display text-4xl sm:text-6xl md:text-7xl font-semibold leading-[1.05]">
+          How Serious Traders Are Passing{" "}
+          <span className="text-gradient-gold">$100K+ Prop Firm</span> Challenges
+          <span className="block mt-2 text-foreground/90 text-3xl sm:text-5xl md:text-6xl">
+            And Getting Paid Every Month
+          </span>
+        </h1>
+
+        <p className="mt-7 mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground leading-relaxed">
+          Watch the short training below to see the exact framework — then book a
+          free implementation call to apply it to your account.
+        </p>
+      </div>
+
+      <VSL />
+
+      <div id="book" className="mt-10 flex flex-col items-center gap-4 animate-fade-up">
+        <CTAButton>Yes — Book My Implementation Call</CTAButton>
+        <p className="text-sm text-muted-foreground flex items-center gap-2">
+          <span className="size-1.5 rounded-full bg-gold" />
+          Limited spots this week · No cost · 1-on-1 with our team
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function VSL() {
+  const [playing, setPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Replace this with your real VSL: YouTube/Vimeo embed or hosted MP4 URL.
+  const VIDEO_SRC = ""; // e.g. "/videos/vsl.mp4"
+
+  useEffect(() => {
+    if (playing && videoRef.current) videoRef.current.play().catch(() => {});
+  }, [playing]);
+
+  return (
+    <div className="relative mx-auto mt-12 max-w-4xl">
+      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-gold/30 via-transparent to-gold/10 blur-2xl opacity-60" />
+      <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-gold/40 bg-navy-deep shadow-elevated">
+        {VIDEO_SRC ? (
+          <video
+            ref={videoRef}
+            src={VIDEO_SRC}
+            controls={playing}
+            playsInline
+            className="size-full object-cover"
+            onClick={() => setPlaying(true)}
+          />
+        ) : (
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,oklch(0.28_0.07_265)_0%,oklch(0.12_0.04_265)_75%)]" />
+        )}
+
+        {!playing && (
+          <button
+            type="button"
+            onClick={() => setPlaying(true)}
+            className="absolute inset-0 flex flex-col items-center justify-center gap-4 group"
+            aria-label="Play the training video"
+          >
+            <span className="relative flex size-20 sm:size-24 items-center justify-center rounded-full bg-gradient-to-br from-gold to-gold-bright shadow-gold animate-pulse-gold transition-transform group-hover:scale-105">
+              <svg viewBox="0 0 24 24" className="size-9 sm:size-10 translate-x-0.5 fill-navy-deep">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </span>
+            <span className="text-sm uppercase tracking-[0.25em] text-gold/90 font-medium">
+              Watch the training · 12 min
+            </span>
+            <span className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-foreground/70">
+              <span className="flex items-center gap-2">
+                <span className="size-2 rounded-full bg-red-500 animate-pulse" />
+                LIVE TRAINING
+              </span>
+              <span>Sound On 🔊</span>
+            </span>
+          </button>
+        )}
+      </div>
     </div>
+  );
+}
+
+function CTAButton({ children }: { children: React.ReactNode }) {
+  return (
+    <a
+      href={CALENDLY_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-br from-gold to-gold-bright px-8 sm:px-10 py-5 text-base sm:text-lg font-semibold text-navy-deep shadow-gold transition-all hover:scale-[1.02] hover:shadow-[0_15px_60px_-10px_oklch(0.86_0.14_88/0.6)] animate-pulse-gold"
+    >
+      {children}
+      <svg viewBox="0 0 24 24" className="size-5 transition-transform group-hover:translate-x-1 fill-navy-deep">
+        <path d="M13 5l7 7-7 7v-4H4v-6h9z" />
+      </svg>
+    </a>
+  );
+}
+
+function ForWho() {
+  const items = [
+    "You've failed a challenge (or two) and you're tired of giving evaluation firms your money.",
+    "You're profitable on demo but blow up when real targets and drawdowns kick in.",
+    "You want a repeatable framework — not 'discipline' lectures or guru hopium.",
+  ];
+  return (
+    <section className="px-6 py-16 sm:py-20 border-t border-border/40">
+      <div className="mx-auto max-w-3xl">
+        <h2 className="text-center font-display text-3xl sm:text-4xl font-semibold">
+          This is for you if<span className="text-gold">…</span>
+        </h2>
+        <ul className="mt-10 space-y-4">
+          {items.map((t) => (
+            <li
+              key={t}
+              className="flex gap-4 rounded-xl border border-border/60 bg-card/60 p-5 backdrop-blur-sm"
+            >
+              <span className="mt-1 flex size-6 shrink-0 items-center justify-center rounded-full bg-gold/15 text-gold">
+                <svg viewBox="0 0 24 24" className="size-4 fill-current">
+                  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" />
+                </svg>
+              </span>
+              <p className="text-base sm:text-lg text-foreground/90 leading-relaxed">{t}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+function Outcomes() {
+  const stats = [
+    { k: "82%", v: "Of trainees pass their first challenge after applying the framework" },
+    { k: "$1.2M+", v: "In combined payouts pulled by our community last year" },
+    { k: "14 days", v: "Average time from kickoff call to first funded account" },
+  ];
+  return (
+    <section className="px-6 py-16 sm:py-20 border-t border-border/40">
+      <div className="mx-auto max-w-5xl">
+        <p className="text-center text-xs uppercase tracking-[0.25em] text-gold/80">
+          What you can expect
+        </p>
+        <h2 className="mt-3 text-center font-display text-3xl sm:text-4xl font-semibold">
+          Results that speak louder than promises
+        </h2>
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
+          {stats.map((s) => (
+            <div
+              key={s.k}
+              className="rounded-2xl border border-gold/20 bg-card/60 p-8 text-center backdrop-blur-sm transition-transform hover:-translate-y-1"
+            >
+              <div className="font-display text-5xl text-gradient-gold font-semibold">{s.k}</div>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.v}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FinalCTA() {
+  return (
+    <section className="px-6 py-20 sm:py-28 border-t border-border/40">
+      <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-gold/40 bg-gradient-to-br from-navy-mid to-navy-deep p-10 sm:p-14 text-center shadow-elevated">
+        <div className="absolute -top-20 -right-20 size-64 rounded-full bg-gold/20 blur-3xl" />
+        <h2 className="relative font-display text-3xl sm:text-5xl font-semibold leading-tight">
+          Ready to stop paying for{" "}
+          <span className="text-gradient-gold">failed challenges</span>?
+        </h2>
+        <p className="relative mt-5 text-lg text-muted-foreground">
+          Book a free 1-on-1 implementation call. We'll map your path to a funded
+          account — even if you've blown three in a row.
+        </p>
+        <div className="relative mt-9 flex flex-col items-center gap-4">
+          <CTAButton>Book My Free Implementation Call</CTAButton>
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            Only 7 spots open this week
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="px-6 py-10 border-t border-border/40">
+      <div className="mx-auto max-w-6xl text-center text-xs text-muted-foreground space-y-2">
+        <p>
+          © {new Date().getFullYear()} Funded Blueprint. Trading involves risk. Past
+          performance does not guarantee future results.
+        </p>
+        <p className="text-muted-foreground/70">
+          Not affiliated with any prop firm. Results vary based on individual effort and market conditions.
+        </p>
+      </div>
+    </footer>
   );
 }
