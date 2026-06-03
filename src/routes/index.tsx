@@ -86,10 +86,7 @@ function Hero() {
         </h1>
 
         <p className="mt-7 mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground leading-relaxed">
-          Watch the short training to see exactly how the PFA Framework arbitrages
-          prop firm challenges against one brokerage account — so you either
-          break even, get funded, or profit on the hedge. Then book your free
-          implementation call.
+          Watch the short training below to see how serious traders are passing prop firm challenges and getting paid every month - then book a free implementation call to apply it to your account.
         </p>
       </div>
 
