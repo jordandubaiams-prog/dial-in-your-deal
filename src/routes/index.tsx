@@ -39,6 +39,7 @@ function Index() {
     <main className="min-h-screen text-foreground">
       <TopBar />
       <Hero />
+      <SocialProof />
       <Guarantee />
       <HowItWorks />
       <ForWho />
@@ -80,19 +81,13 @@ function Hero() {
           The Prop Firms Arbitrage Framework
         </div>
 
-        <h1 className="mt-7 font-display text-4xl sm:text-6xl md:text-7xl font-semibold leading-[1.05]">
-          The Legal Framework Traders Use To{" "}
-          <span className="text-gradient-gold">Hedge Prop Firms</span>
-          <span className="block mt-2 text-foreground/90 text-3xl sm:text-5xl md:text-6xl">
-            Against Each Other — For Profit
-          </span>
+        <h1 className="mt-7 font-display text-3xl sm:text-5xl md:text-6xl font-semibold leading-[1.05]">
+          The Only Educational Course You'll Ever Need To Finally Get Funded And To Become Profitable.{" "}
+          <span className="text-gradient-gold">Or a 100% REFUND</span>
         </h1>
 
         <p className="mt-7 mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground leading-relaxed">
-          Watch the short training to see exactly how the PFA Framework arbitrages
-          prop firm challenges against one brokerage account — so you either
-          break even, get funded, or profit on the hedge. Then book your free
-          implementation call.
+          Watch the short training below to see how serious traders are passing prop firm challenges and getting paid every month - then book a free implementation call to apply it to your account.
         </p>
       </div>
 
@@ -179,6 +174,32 @@ function CTAButton({ children }: { children: React.ReactNode }) {
         <path d="M13 5l7 7-7 7v-4H4v-6h9z" />
       </svg>
     </a>
+  );
+}
+
+function SocialProof() {
+  const stats = [
+    { n: "82%", l: "Of trainees pass their first challenge after applying the framework" },
+    { n: "$2.4M+", l: "In combined funded capital pulled by our community last year" },
+    { n: "100%", l: "Legal risk arbitrage between prop firms and your broker account" },
+  ];
+  return (
+    <section className="px-6 py-10 sm:py-14 border-t border-border/40">
+      <div className="mx-auto max-w-5xl">
+        <div className="grid gap-8 sm:grid-cols-3 text-center">
+          {stats.map((s) => (
+            <div key={s.n} className="space-y-2">
+              <div className="font-display text-5xl sm:text-6xl text-gradient-gold font-semibold">
+                {s.n}
+              </div>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-xs mx-auto">
+                {s.l}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
