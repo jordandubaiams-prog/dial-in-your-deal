@@ -80,12 +80,9 @@ function Hero() {
           The Prop Firms Arbitrage Framework
         </div>
 
-        <h1 className="mt-7 font-display text-4xl sm:text-6xl md:text-7xl font-semibold leading-[1.05]">
-          The Legal Framework Traders Use To{" "}
-          <span className="text-gradient-gold">Hedge Prop Firms</span>
-          <span className="block mt-2 text-foreground/90 text-3xl sm:text-5xl md:text-6xl">
-            Against Each Other — For Profit
-          </span>
+        <h1 className="mt-7 font-display text-3xl sm:text-5xl md:text-6xl font-semibold leading-[1.05]">
+          The Only Educational Course You'll Ever Need To Finally Get Funded And To Become Profitable.{" "}
+          <span className="text-gradient-gold">Or a 100% REFUND</span>
         </h1>
 
         <p className="mt-7 mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground leading-relaxed">
