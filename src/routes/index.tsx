@@ -6,17 +6,17 @@ const CALENDLY_URL = "https://calendly.com/your-handle/strategy-call";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pass Any Prop Firm Challenge — Funded Trader Blueprint" },
+      { title: "The Prop Firms Arbitrage Framework — The Traders Academy" },
       {
         name: "description",
         content:
-          "The exact system traders use to pass evaluations and pull consistent payouts from prop firms. Watch the free training, then book your implementation call.",
+          "A risk-managed hedging framework that lets serious traders pass prop firm challenges and pull consistent payouts — by arbitraging prop firms against a brokerage account. Watch the training, then book your implementation call.",
       },
-      { property: "og:title", content: "Pass Any Prop Firm Challenge — Funded Trader Blueprint" },
+      { property: "og:title", content: "The Prop Firms Arbitrage Framework — The Traders Academy" },
       {
         property: "og:description",
         content:
-          "Watch the free training, then book your implementation call with our team.",
+          "Hedge prop firms against each other for profit. 100% legal. Watch the training and book your implementation call.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -39,6 +39,8 @@ function Index() {
     <main className="min-h-screen text-foreground">
       <TopBar />
       <Hero />
+      <Guarantee />
+      <HowItWorks />
       <ForWho />
       <Outcomes />
       <FinalCTA />
@@ -53,7 +55,10 @@ function TopBar() {
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
         <div className="flex items-center gap-2">
           <div className="size-7 rounded-md bg-gradient-to-br from-gold to-gold-bright shadow-gold" />
-          <span className="font-display text-xl tracking-tight">Funded Blueprint</span>
+          <div className="leading-tight">
+            <div className="font-display text-lg tracking-tight">The Traders Academy</div>
+            <div className="text-[10px] uppercase tracking-[0.2em] text-gold/80">PFA Framework</div>
+          </div>
         </div>
         <a
           href="#book"
@@ -72,20 +77,22 @@ function Hero() {
       <div className="mx-auto max-w-4xl text-center animate-fade-up">
         <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-gold">
           <span className="size-1.5 rounded-full bg-gold animate-pulse" />
-          Free Trader Training — 2026
+          The Prop Firms Arbitrage Framework
         </div>
 
         <h1 className="mt-7 font-display text-4xl sm:text-6xl md:text-7xl font-semibold leading-[1.05]">
-          How Serious Traders Are Passing{" "}
-          <span className="text-gradient-gold">$100K+ Prop Firm</span> Challenges
+          The Legal Framework Traders Use To{" "}
+          <span className="text-gradient-gold">Hedge Prop Firms</span>
           <span className="block mt-2 text-foreground/90 text-3xl sm:text-5xl md:text-6xl">
-            And Getting Paid Every Month
+            Against Each Other — For Profit
           </span>
         </h1>
 
         <p className="mt-7 mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground leading-relaxed">
-          Watch the short training below to see the exact framework — then book a
-          free implementation call to apply it to your account.
+          Watch the short training to see exactly how the PFA Framework arbitrages
+          prop firm challenges against one brokerage account — so you either
+          break even, get funded, or profit on the hedge. Then book your free
+          implementation call.
         </p>
       </div>
 
@@ -175,11 +182,75 @@ function CTAButton({ children }: { children: React.ReactNode }) {
   );
 }
 
+function Guarantee() {
+  return (
+    <section className="px-6 pb-4">
+      <div className="mx-auto max-w-3xl rounded-2xl border border-gold/40 bg-gradient-to-br from-gold/10 to-transparent p-6 sm:p-8 text-center">
+        <p className="text-xs uppercase tracking-[0.25em] text-gold">Our Guarantee</p>
+        <p className="mt-3 font-display text-2xl sm:text-3xl leading-snug">
+          “If you don't become funded or generate profits,{" "}
+          <span className="text-gradient-gold">you get a full refund.</span> No questions asked.”
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function HowItWorks() {
+  const steps = [
+    {
+      n: "01",
+      t: "Open the positions",
+      d: "Take a trade on a 1-step prop firm challenge and the exact opposite trade on your brokerage account. One side wins, the other loses — by design.",
+    },
+    {
+      n: "02",
+      t: "Engineer the outcome",
+      d: "Pre-calculated risk ratios mean either you pass the challenge and get funded, or the hedge on your broker fully covers the cost of the lost challenge.",
+    },
+    {
+      n: "03",
+      t: "Get paid",
+      d: "Once funded, scale lot sizing using the PFA formula. Whether the funded account hits payout or breaches drawdown, the structure leaves you in profit.",
+    },
+  ];
+  return (
+    <section className="px-6 py-16 sm:py-20 border-t border-border/40">
+      <div className="mx-auto max-w-5xl">
+        <p className="text-center text-xs uppercase tracking-[0.25em] text-gold/80">
+          How the PFA Framework Works
+        </p>
+        <h2 className="mt-3 text-center font-display text-3xl sm:text-4xl font-semibold">
+          Two accounts. One formula.{" "}
+          <span className="text-gradient-gold">Asymmetric outcomes.</span>
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
+          The PFA Framework is a risk management and execution system — not a
+          signal service, not a strategy course. It's a structured way to
+          arbitrage prop firms using one brokerage account as a hedge. 100% legal.
+        </p>
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
+          {steps.map((s) => (
+            <div
+              key={s.n}
+              className="rounded-2xl border border-gold/20 bg-card/60 p-7 backdrop-blur-sm transition-transform hover:-translate-y-1"
+            >
+              <div className="font-display text-3xl text-gradient-gold">{s.n}</div>
+              <h3 className="mt-3 font-display text-xl font-semibold">{s.t}</h3>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ForWho() {
   const items = [
-    "You've failed a challenge (or two) and you're tired of giving evaluation firms your money.",
-    "You're profitable on demo but blow up when real targets and drawdowns kick in.",
-    "You want a repeatable framework — not 'discipline' lectures or guru hopium.",
+    "You've blown one (or several) prop firm challenges and you're tired of handing evaluation fees to the firm.",
+    "You're profitable on demo but emotion kicks in the moment real drawdown rules apply.",
+    "You want a mechanical, risk-defined framework — not 'discipline' lectures, signals, or another scalping strategy.",
   ];
   return (
     <section className="px-6 py-16 sm:py-20 border-t border-border/40">
@@ -209,9 +280,9 @@ function ForWho() {
 
 function Outcomes() {
   const stats = [
-    { k: "82%", v: "Of trainees pass their first challenge after applying the framework" },
-    { k: "$1.2M+", v: "In combined payouts pulled by our community last year" },
-    { k: "14 days", v: "Average time from kickoff call to first funded account" },
+    { k: "2 Outcomes", v: "Either you breakeven on a failed challenge, or you pass and scale to payouts" },
+    { k: "1 Framework", v: "Mechanical execution rules — no guessing, no over-discretion, no guru hopium" },
+    { k: "100% Legal", v: "Pure risk arbitrage between independent prop firms and your own broker account" },
   ];
   return (
     <section className="px-6 py-16 sm:py-20 border-t border-border/40">
@@ -220,7 +291,7 @@ function Outcomes() {
           What you can expect
         </p>
         <h2 className="mt-3 text-center font-display text-3xl sm:text-4xl font-semibold">
-          Results that speak louder than promises
+          A defined-risk path to a funded account
         </h2>
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
           {stats.map((s) => (
@@ -228,7 +299,7 @@ function Outcomes() {
               key={s.k}
               className="rounded-2xl border border-gold/20 bg-card/60 p-8 text-center backdrop-blur-sm transition-transform hover:-translate-y-1"
             >
-              <div className="font-display text-5xl text-gradient-gold font-semibold">{s.k}</div>
+              <div className="font-display text-4xl text-gradient-gold font-semibold">{s.k}</div>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.v}</p>
             </div>
           ))}
@@ -244,12 +315,12 @@ function FinalCTA() {
       <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-gold/40 bg-gradient-to-br from-navy-mid to-navy-deep p-10 sm:p-14 text-center shadow-elevated">
         <div className="absolute -top-20 -right-20 size-64 rounded-full bg-gold/20 blur-3xl" />
         <h2 className="relative font-display text-3xl sm:text-5xl font-semibold leading-tight">
-          Ready to stop paying for{" "}
-          <span className="text-gradient-gold">failed challenges</span>?
+          Stop gambling on challenges.{" "}
+          <span className="text-gradient-gold">Start arbitraging them.</span>
         </h2>
         <p className="relative mt-5 text-lg text-muted-foreground">
-          Book a free 1-on-1 implementation call. We'll map your path to a funded
-          account — even if you've blown three in a row.
+          Book your free 1-on-1 implementation call. We'll walk you through the
+          PFA Framework setup for your account — and our refund guarantee.
         </p>
         <div className="relative mt-9 flex flex-col items-center gap-4">
           <CTAButton>Book My Free Implementation Call</CTAButton>
@@ -267,11 +338,12 @@ function Footer() {
     <footer className="px-6 py-10 border-t border-border/40">
       <div className="mx-auto max-w-6xl text-center text-xs text-muted-foreground space-y-2">
         <p>
-          © {new Date().getFullYear()} Funded Blueprint. Trading involves risk. Past
-          performance does not guarantee future results.
+          © {new Date().getFullYear()} The Traders Academy — The Prop Firms Arbitrage Framework.
+          Trading involves risk. Past performance does not guarantee future results.
         </p>
         <p className="text-muted-foreground/70">
-          Not affiliated with any prop firm. Results vary based on individual effort and market conditions.
+          Not affiliated with any prop firm or broker. The PFA Framework is a risk management
+          and execution methodology. Results vary based on individual execution and market conditions.
         </p>
       </div>
     </footer>
