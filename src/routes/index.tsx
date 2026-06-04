@@ -6,13 +6,13 @@ const CALENDLY_URL = "https://calendly.com/your-handle/strategy-call";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The Prop Firms Arbitrage Framework — The Traders Academy" },
+      { title: "The Prop Firms Hedge Blueprint — The Traders Academy" },
       {
         name: "description",
         content:
           "A risk-managed hedging framework that lets serious traders pass prop firm challenges and pull consistent payouts — by arbitraging prop firms against a brokerage account. Watch the training, then book your implementation call.",
       },
-      { property: "og:title", content: "The Prop Firms Arbitrage Framework — The Traders Academy" },
+      { property: "og:title", content: "The Prop Firms Hedge Blueprint — The Traders Academy" },
       {
         property: "og:description",
         content:
@@ -57,7 +57,7 @@ function TopBar() {
           <div className="size-7 rounded-md bg-gradient-to-br from-gold to-gold-bright shadow-gold" />
           <div className="leading-tight">
             <div className="font-display text-lg tracking-tight">The Traders Academy</div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-gold/80">PFA Framework</div>
+            <div className="text-[10px] uppercase tracking-[0.2em] text-gold/80">THE PFH BLUEPRINT</div>
           </div>
         </div>
         <a
@@ -77,7 +77,7 @@ function Hero() {
       <div className="mx-auto max-w-4xl text-center animate-fade-up">
         <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-gold">
           <span className="size-1.5 rounded-full bg-gold animate-pulse" />
-          The Prop Firms Arbitrage Framework
+          THE PROP FIRMS HEDGE BLUEPRINT™
         </div>
 
         <h1 className="mt-7 font-display text-3xl sm:text-5xl md:text-6xl font-semibold leading-[1.05]">
@@ -268,7 +268,7 @@ function FinalCTA() {
         </h2>
         <p className="relative mt-5 text-lg text-muted-foreground">
           Book your free 1-on-1 implementation call. We'll walk you through the
-          PFA Framework setup for your account — and our refund guarantee.
+          PFH Blueprint setup for your account — and our refund guarantee.
         </p>
         <div className="relative mt-9 flex flex-col items-center gap-4">
           <CTAButton>Book My Free Implementation Call</CTAButton>
@@ -286,11 +286,11 @@ function Footer() {
     <footer className="px-6 py-10 border-t border-border/40">
       <div className="mx-auto max-w-6xl text-center text-xs text-muted-foreground space-y-2">
         <p>
-          © {new Date().getFullYear()} The Traders Academy — The Prop Firms Arbitrage Framework.
+          © {new Date().getFullYear()} The Traders Academy — The Prop Firms Hedge Blueprint.
           Trading involves risk. Past performance does not guarantee future results.
         </p>
         <p className="text-muted-foreground/70">
-          Not affiliated with any prop firm or broker. The PFA Framework is a risk management
+          Not affiliated with any prop firm or broker. The PFH Blueprint is a risk management
           and execution methodology. Results vary based on individual execution and market conditions.
         </p>
       </div>
