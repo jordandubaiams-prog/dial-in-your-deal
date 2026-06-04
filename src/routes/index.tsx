@@ -41,14 +41,13 @@ function Index() {
       <Hero />
       <SocialProof />
       <Guarantee />
-      <HowItWorks />
       <ForWho />
-      <Outcomes />
       <FinalCTA />
       <Footer />
     </main>
   );
 }
+
 
 function TopBar() {
   return (
@@ -82,13 +81,15 @@ function Hero() {
         </div>
 
         <h1 className="mt-7 font-display text-3xl sm:text-5xl md:text-6xl font-semibold leading-[1.05]">
-          The Only Educational Course You'll Ever Need To Finally Get Funded And To Become Profitable.{" "}
-          <span className="text-gradient-gold">Or a 100% REFUND</span>
+          How Traders Are Passing Prop Firm Challenges With Ease And Getting Paid Every Month.
         </h1>
 
         <p className="mt-7 mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground leading-relaxed">
-          Watch the short training below to see how serious traders are passing prop firm challenges and getting paid every month - then book a free implementation call to apply it to your account.
+          This is the only system you'll ever need to finally get funded and start generating profits consistently.{" "}
+          <span className="font-semibold text-gradient-gold">Or we'll give you a 100% Refund</span>
+          {" "}— Watch the video below and book a free implementation call.
         </p>
+
       </div>
 
       <VSL />
@@ -217,55 +218,9 @@ function Guarantee() {
   );
 }
 
-function HowItWorks() {
-  const steps = [
-    {
-      n: "01",
-      t: "Open the positions",
-      d: "Take a trade on a 1-step prop firm challenge and the exact opposite trade on your brokerage account. One side wins, the other loses — by design.",
-    },
-    {
-      n: "02",
-      t: "Engineer the outcome",
-      d: "Pre-calculated risk ratios mean either you pass the challenge and get funded, or the hedge on your broker fully covers the cost of the lost challenge.",
-    },
-    {
-      n: "03",
-      t: "Get paid",
-      d: "Once funded, scale lot sizing using the PFA formula. Whether the funded account hits payout or breaches drawdown, the structure leaves you in profit.",
-    },
-  ];
-  return (
-    <section className="px-6 py-16 sm:py-20 border-t border-border/40">
-      <div className="mx-auto max-w-5xl">
-        <p className="text-center text-xs uppercase tracking-[0.25em] text-gold/80">
-          How the PFA Framework Works
-        </p>
-        <h2 className="mt-3 text-center font-display text-3xl sm:text-4xl font-semibold">
-          Two accounts. One formula.{" "}
-          <span className="text-gradient-gold">Asymmetric outcomes.</span>
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
-          The PFA Framework is a risk management and execution system — not a
-          signal service, not a strategy course. It's a structured way to
-          arbitrage prop firms using one brokerage account as a hedge. 100% legal.
-        </p>
-        <div className="mt-12 grid gap-6 sm:grid-cols-3">
-          {steps.map((s) => (
-            <div
-              key={s.n}
-              className="rounded-2xl border border-gold/20 bg-card/60 p-7 backdrop-blur-sm transition-transform hover:-translate-y-1"
-            >
-              <div className="font-display text-3xl text-gradient-gold">{s.n}</div>
-              <h3 className="mt-3 font-display text-xl font-semibold">{s.t}</h3>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+
+
+
 
 function ForWho() {
   const items = [
@@ -299,36 +254,8 @@ function ForWho() {
   );
 }
 
-function Outcomes() {
-  const stats = [
-    { k: "2 Outcomes", v: "Either you breakeven on a failed challenge, or you pass and scale to payouts" },
-    { k: "1 Framework", v: "Mechanical execution rules — no guessing, no over-discretion, no guru hopium" },
-    { k: "100% Legal", v: "Pure risk arbitrage between independent prop firms and your own broker account" },
-  ];
-  return (
-    <section className="px-6 py-16 sm:py-20 border-t border-border/40">
-      <div className="mx-auto max-w-5xl">
-        <p className="text-center text-xs uppercase tracking-[0.25em] text-gold/80">
-          What you can expect
-        </p>
-        <h2 className="mt-3 text-center font-display text-3xl sm:text-4xl font-semibold">
-          A defined-risk path to a funded account
-        </h2>
-        <div className="mt-12 grid gap-6 sm:grid-cols-3">
-          {stats.map((s) => (
-            <div
-              key={s.k}
-              className="rounded-2xl border border-gold/20 bg-card/60 p-8 text-center backdrop-blur-sm transition-transform hover:-translate-y-1"
-            >
-              <div className="font-display text-4xl text-gradient-gold font-semibold">{s.k}</div>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.v}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+
+
 
 function FinalCTA() {
   return (
