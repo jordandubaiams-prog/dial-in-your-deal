@@ -1,5 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import payout1 from "@/assets/payouts/Screenshot_2026-04-28_at_12.45.55.jpg.asset.json";
+import payout2 from "@/assets/payouts/Screenshot_2026-04-28_at_12.46.23.jpg.asset.json";
+import payout3 from "@/assets/payouts/Screenshot_2026-04-28_at_12.46.53.jpg.asset.json";
+import payout4 from "@/assets/payouts/Screenshot_2026-04-28_at_12.47.09.jpg.asset.json";
+import payout5 from "@/assets/payouts/Screenshot_2026-04-28_at_12.47.25.jpg.asset.json";
+import payout6 from "@/assets/payouts/Screenshot_2026-04-28_at_12.49.57.PNG.asset.json";
+import payout7 from "@/assets/payouts/Screenshot_2026-04-28_at_12.52.14.jpg.asset.json";
+import payout8 from "@/assets/payouts/Screenshot_2026-04-28_at_12.54.30.jpg.asset.json";
+import payout9 from "@/assets/payouts/Screenshot_2026-04-28_at_12.55.09.jpg.asset.json";
+import payout10 from "@/assets/payouts/Screenshot_2026-04-28_at_12.55.28.jpg.asset.json";
+
+const PAYOUTS = [payout1, payout2, payout3, payout4, payout5, payout6, payout7, payout8, payout9, payout10];
 
 const CALENDLY_URL = "https://calendly.com/your-handle/strategy-call";
 
