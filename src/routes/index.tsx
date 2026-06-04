@@ -218,7 +218,8 @@ function Guarantee() {
   );
 }
 
-function HowItWorks_REMOVED() { return null; }
+
+
 
 
 function ForWho() {
