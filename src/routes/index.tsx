@@ -41,14 +41,13 @@ function Index() {
       <Hero />
       <SocialProof />
       <Guarantee />
-      <HowItWorks />
       <ForWho />
-      <Outcomes />
       <FinalCTA />
       <Footer />
     </main>
   );
 }
+
 
 function TopBar() {
   return (
@@ -82,13 +81,15 @@ function Hero() {
         </div>
 
         <h1 className="mt-7 font-display text-3xl sm:text-5xl md:text-6xl font-semibold leading-[1.05]">
-          The Only Educational Course You'll Ever Need To Finally Get Funded And To Become Profitable.{" "}
-          <span className="text-gradient-gold">Or a 100% REFUND</span>
+          How Traders Are Passing Prop Firm Challenges With Ease And Getting Paid Every Month.
         </h1>
 
         <p className="mt-7 mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground leading-relaxed">
-          Watch the short training below to see how serious traders are passing prop firm challenges and getting paid every month - then book a free implementation call to apply it to your account.
+          This is the only system you'll ever need to finally get funded and start generating profits consistently.{" "}
+          <span className="font-semibold text-gradient-gold">Or we'll give you a 100% Refund</span>
+          {" "}— Watch the video below and book a free implementation call.
         </p>
+
       </div>
 
       <VSL />
