@@ -11,7 +11,7 @@ import payout8 from "@/assets/payouts/Screenshot_2026-04-28_at_12.54.30.jpg.asse
 import payout9 from "@/assets/payouts/Screenshot_2026-04-28_at_12.55.09.jpg.asset.json";
 import payout10 from "@/assets/payouts/Screenshot_2026-04-28_at_12.55.28.jpg.asset.json";
 
-const PAYOUTS = [payout1, payout2, payout3, payout4, payout5, payout6, payout7, payout8, payout9, payout10];
+const PAYOUTS: { url: string }[] = [payout1, payout2, payout3, payout4, payout5, payout6, payout7, payout8, payout9, payout10] as { url: string }[];
 
 const CALENDLY_URL = "https://calendly.com/your-handle/strategy-call";
 
