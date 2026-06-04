@@ -57,7 +57,7 @@ function TopBar() {
           <div className="size-7 rounded-md bg-gradient-to-br from-gold to-gold-bright shadow-gold" />
           <div className="leading-tight">
             <div className="font-display text-lg tracking-tight">The Traders Academy</div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-gold/80">THE PFH BLUEPRINT</div>
+            <div className="text-[10px] uppercase tracking-[0.2em] text-gold/80">Prop Firm Playbook™</div>
           </div>
         </div>
         <a
@@ -77,7 +77,7 @@ function Hero() {
       <div className="mx-auto max-w-4xl text-center animate-fade-up">
         <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-gold">
           <span className="size-1.5 rounded-full bg-gold animate-pulse" />
-          THE PROP FIRMS HEDGE BLUEPRINT™
+          THE PROP FIRM PLAYBOOK™
         </div>
 
         <h1 className="mt-7 font-display text-3xl sm:text-5xl md:text-6xl font-semibold leading-[1.05]">
@@ -180,9 +180,9 @@ function CTAButton({ children }: { children: React.ReactNode }) {
 
 function SocialProof() {
   const stats = [
-    { n: "82%", l: "Of trainees pass their first challenge after applying the framework" },
+    { n: "100%", l: "suitable for both beginner traders & experienced traders" },
     { n: "$2.4M+", l: "In combined funded capital pulled by our community last year" },
-    { n: "100%", l: "Legal risk arbitrage between prop firms and your broker account" },
+    { n: "14 Days", l: "on average to pass evaluation challenges and get funded" },
   ];
   return (
     <section className="px-6 py-10 sm:py-14 border-t border-border/40">
@@ -224,9 +224,9 @@ function Guarantee() {
 
 function ForWho() {
   const items = [
-    "You've blown one (or several) prop firm challenges and you're tired of handing evaluation fees to the firm.",
-    "You're profitable on demo but emotion kicks in the moment real drawdown rules apply.",
-    "You want a mechanical, risk-defined framework — not 'discipline' lectures, signals, or another scalping strategy.",
+    "You're tired of blowing through countless evaluation challenges and losing your money to prop firms.",
+    "You're new to prop firm trading and want to start off the right way.",
+    "You want a mechanical, risk-defined framework that is easy to execute without having to learn overcomplicated trading strategies.",
   ];
   return (
     <section className="px-6 py-16 sm:py-20 border-t border-border/40">
@@ -264,11 +264,10 @@ function FinalCTA() {
         <div className="absolute -top-20 -right-20 size-64 rounded-full bg-gold/20 blur-3xl" />
         <h2 className="relative font-display text-3xl sm:text-5xl font-semibold leading-tight">
           Stop gambling on challenges.{" "}
-          <span className="text-gradient-gold">Start arbitraging them.</span>
+          <span className="text-gradient-gold">Start playing the game correctly.</span>
         </h2>
         <p className="relative mt-5 text-lg text-muted-foreground">
-          Book your free 1-on-1 implementation call. We'll walk you through the
-          PFH Blueprint setup for your account — and our refund guarantee.
+          Book your free 1-on-1 implementation call. We'll walk you through the Prop Firm Playbook™ and to see if we're a good fit.
         </p>
         <div className="relative mt-9 flex flex-col items-center gap-4">
           <CTAButton>Book My Free Implementation Call</CTAButton>
@@ -286,11 +285,11 @@ function Footer() {
     <footer className="px-6 py-10 border-t border-border/40">
       <div className="mx-auto max-w-6xl text-center text-xs text-muted-foreground space-y-2">
         <p>
-          © {new Date().getFullYear()} The Traders Academy — The Prop Firms Hedge Blueprint.
+          © {new Date().getFullYear()} The Traders Academy — The Prop Firm Playbook™.
           Trading involves risk. Past performance does not guarantee future results.
         </p>
         <p className="text-muted-foreground/70">
-          Not affiliated with any prop firm or broker. The PFH Blueprint is a risk management
+          Not affiliated with any prop firm or broker. The Prop Firm Playbook™ is a risk management
           and execution methodology. Results vary based on individual execution and market conditions.
         </p>
       </div>
