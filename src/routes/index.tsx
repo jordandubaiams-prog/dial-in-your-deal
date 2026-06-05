@@ -1,15 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import payout1 from "@/assets/payouts/Screenshot_2026-04-28_at_12.45.55.jpg.asset.json";
-import payout2 from "@/assets/payouts/Screenshot_2026-04-28_at_12.46.23.jpg.asset.json";
-import payout3 from "@/assets/payouts/Screenshot_2026-04-28_at_12.46.53.jpg.asset.json";
-import payout4 from "@/assets/payouts/Screenshot_2026-04-28_at_12.47.09.jpg.asset.json";
-import payout5 from "@/assets/payouts/Screenshot_2026-04-28_at_12.47.25.jpg.asset.json";
-import payout6 from "@/assets/payouts/Screenshot_2026-04-28_at_12.49.57.PNG.asset.json";
-import payout7 from "@/assets/payouts/Screenshot_2026-04-28_at_12.52.14.jpg.asset.json";
-import payout8 from "@/assets/payouts/Screenshot_2026-04-28_at_12.54.30.jpg.asset.json";
-import payout9 from "@/assets/payouts/Screenshot_2026-04-28_at_12.55.09.jpg.asset.json";
-import payout10 from "@/assets/payouts/Screenshot_2026-04-28_at_12.55.28.jpg.asset.json";
+import payout1 from "@/assets/payouts/p1.jpg.asset.json";
+import payout2 from "@/assets/payouts/p2.jpg.asset.json";
+import payout3 from "@/assets/payouts/p3.jpg.asset.json";
+import payout4 from "@/assets/payouts/p4.jpg.asset.json";
+import payout5 from "@/assets/payouts/p5.jpg.asset.json";
+import payout6 from "@/assets/payouts/p6.jpg.asset.json";
+import payout7 from "@/assets/payouts/p7.jpg.asset.json";
+import payout8 from "@/assets/payouts/p8.jpg.asset.json";
+import payout9 from "@/assets/payouts/p9.jpg.asset.json";
+import payout10 from "@/assets/payouts/p10.jpg.asset.json";
 
 const PAYOUTS: { url: string }[] = [payout1, payout2, payout3, payout4, payout5, payout6, payout7, payout8, payout9, payout10] as { url: string }[];
 
@@ -69,14 +69,14 @@ function PayoutProof() {
       <div className="px-6 text-center mb-10 max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-gold">
           <span className="size-1.5 rounded-full bg-gold animate-pulse" />
-          Proof of Concept
+          Live Milestones
         </div>
         <h2 className="mt-5 font-display text-3xl sm:text-5xl font-semibold leading-tight">
           Real Payouts.{" "}
           <span className="text-gradient-gold">Real Proof.</span>
         </h2>
         <p className="mt-4 text-base sm:text-lg text-muted-foreground">
-          A live stream of actual prop firm payouts pulled using the exact framework taught inside The Prop Firm Playbook™.
+          A live showcase of actual prop firm payout milestones and performance metrics.
         </p>
       </div>
 
@@ -108,7 +108,7 @@ function PayoutProof() {
       </div>
 
       <p className="mt-8 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-        49+ payouts collected · Hover to slow down
+        Live Prop Firm Payouts History · Hover to slow down
       </p>
     </section>
   );
@@ -246,8 +246,8 @@ function CTAButton({ children }: { children: React.ReactNode }) {
 
 function SocialProof() {
   const stats = [
-    { n: "100%", l: "suitable for both beginner traders & experienced traders" },
-    { n: "$2.4M+", l: "In combined funded capital pulled by our community last year" },
+    { n: "2024", l: "Since we've been helping traders get funded" },
+    { n: "$3M+", l: "In combined funded capital through passing evaluation challenges." },
     { n: "14 Days", l: "on average to pass evaluation challenges and get funded" },
   ];
   return (
@@ -276,7 +276,7 @@ function Guarantee() {
       <div className="mx-auto max-w-3xl rounded-2xl border border-gold/40 bg-gradient-to-br from-gold/10 to-transparent p-6 sm:p-8 text-center">
         <p className="text-xs uppercase tracking-[0.25em] text-gold">Our Guarantee</p>
         <p className="mt-3 font-display text-2xl sm:text-3xl leading-snug">
-          “If you don't become funded or generate profits,{" "}
+          “If you don't become funded or generate profits using our system,{" "}
           <span className="text-gradient-gold">you get a full refund.</span> No questions asked.”
         </p>
       </div>
@@ -291,7 +291,7 @@ function Guarantee() {
 function ForWho() {
   const items = [
     "You're tired of blowing through countless evaluation challenges and losing your money to prop firms.",
-    "You're new to prop firm trading and want to start off the right way.",
+    "You're completely new to prop firm trading and want to start off the right way.",
     "You want a mechanical, risk-defined framework that is easy to execute without having to learn overcomplicated trading strategies.",
   ];
   return (
@@ -300,6 +300,9 @@ function ForWho() {
         <h2 className="text-center font-display text-3xl sm:text-4xl font-semibold">
           This is for you if<span className="text-gold">…</span>
         </h2>
+        <p className="mt-5 text-center text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          Stop guessing your way through evaluation challenges. Learn the correct approach to make passing them a repeatable process.
+        </p>
         <ul className="mt-10 space-y-4">
           {items.map((t) => (
             <li
