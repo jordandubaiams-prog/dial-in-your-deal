@@ -10,8 +10,18 @@ import payout7 from "@/assets/payouts/p7.jpg.asset.json";
 import payout8 from "@/assets/payouts/p8.jpg.asset.json";
 import payout9 from "@/assets/payouts/p9.jpg.asset.json";
 import payout10 from "@/assets/payouts/p10.jpg.asset.json";
+import payout11 from "@/assets/payouts/p11.jpg.asset.json";
+import payout12 from "@/assets/payouts/p12.jpg.asset.json";
+import payout13 from "@/assets/payouts/p13.jpg.asset.json";
+import payout14 from "@/assets/payouts/p14.jpg.asset.json";
+import payout15 from "@/assets/payouts/p15.jpg.asset.json";
+import payout16 from "@/assets/payouts/p16.jpg.asset.json";
+import payout17 from "@/assets/payouts/p17.jpg.asset.json";
+import payout18 from "@/assets/payouts/p18.jpg.asset.json";
+import payout19 from "@/assets/payouts/p19.jpg.asset.json";
+import payout20 from "@/assets/payouts/p20.jpg.asset.json";
 
-const PAYOUTS: { url: string }[] = [payout1, payout2, payout3, payout4, payout5, payout6, payout7, payout8, payout9, payout10] as { url: string }[];
+const PAYOUTS: { url: string }[] = [payout1, payout2, payout3, payout4, payout5, payout6, payout7, payout8, payout9, payout10, payout11, payout12, payout13, payout14, payout15, payout16, payout17, payout18, payout19, payout20] as { url: string }[];
 
 const CALENDLY_URL = "https://calendly.com/your-handle/strategy-call";
 
@@ -300,9 +310,6 @@ function ForWho() {
         <h2 className="text-center font-display text-3xl sm:text-4xl font-semibold">
           This is for you if<span className="text-gold">…</span>
         </h2>
-        <p className="mt-5 text-center text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Stop guessing your way through evaluation challenges. Learn the correct approach to make passing them a repeatable process.
-        </p>
         <ul className="mt-10 space-y-4">
           {items.map((t) => (
             <li
