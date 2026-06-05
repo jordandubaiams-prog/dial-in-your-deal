@@ -291,7 +291,7 @@ function Guarantee() {
 function ForWho() {
   const items = [
     "You're tired of blowing through countless evaluation challenges and losing your money to prop firms.",
-    "You're new to prop firm trading and want to start off the right way.",
+    "You're completely new to prop firm trading and want to start off the right way.",
     "You want a mechanical, risk-defined framework that is easy to execute without having to learn overcomplicated trading strategies.",
   ];
   return (
