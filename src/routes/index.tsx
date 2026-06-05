@@ -108,7 +108,7 @@ function PayoutProof() {
       </div>
 
       <p className="mt-8 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-        49+ payouts collected · Hover to slow down
+        Live Prop Firm Payouts History · Hover to slow down
       </p>
     </section>
   );
