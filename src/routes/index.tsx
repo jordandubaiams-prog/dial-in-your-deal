@@ -276,7 +276,7 @@ function Guarantee() {
       <div className="mx-auto max-w-3xl rounded-2xl border border-gold/40 bg-gradient-to-br from-gold/10 to-transparent p-6 sm:p-8 text-center">
         <p className="text-xs uppercase tracking-[0.25em] text-gold">Our Guarantee</p>
         <p className="mt-3 font-display text-2xl sm:text-3xl leading-snug">
-          “If you don't become funded or generate profits,{" "}
+          “If you don't become funded or generate profits using our system,{" "}
           <span className="text-gradient-gold">you get a full refund.</span> No questions asked.”
         </p>
       </div>
