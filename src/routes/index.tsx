@@ -246,8 +246,8 @@ function CTAButton({ children }: { children: React.ReactNode }) {
 
 function SocialProof() {
   const stats = [
-    { n: "100%", l: "suitable for both beginner traders & experienced traders" },
-    { n: "$2.4M+", l: "In combined funded capital pulled by our community last year" },
+    { n: "2024", l: "Since we've been helping traders get funded" },
+    { n: "$3M+", l: "In combined funded capital through passing evaluation challenges." },
     { n: "14 Days", l: "on average to pass evaluation challenges and get funded" },
   ];
   return (
