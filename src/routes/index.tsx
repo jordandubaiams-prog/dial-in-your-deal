@@ -69,14 +69,14 @@ function PayoutProof() {
       <div className="px-6 text-center mb-10 max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-gold">
           <span className="size-1.5 rounded-full bg-gold animate-pulse" />
-          Proof of Concept
+          Live Milestones
         </div>
         <h2 className="mt-5 font-display text-3xl sm:text-5xl font-semibold leading-tight">
           Real Payouts.{" "}
           <span className="text-gradient-gold">Real Proof.</span>
         </h2>
         <p className="mt-4 text-base sm:text-lg text-muted-foreground">
-          A live stream of actual prop firm payouts pulled using the exact framework taught inside The Prop Firm Playbook™.
+          A live showcase of actual prop firm payout milestones and performance metrics.
         </p>
       </div>
 
