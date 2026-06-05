@@ -300,6 +300,9 @@ function ForWho() {
         <h2 className="text-center font-display text-3xl sm:text-4xl font-semibold">
           This is for you if<span className="text-gold">…</span>
         </h2>
+        <p className="mt-5 text-center text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          Stop guessing your way through evaluation challenges. Learn the correct approach to make passing them a repeatable process.
+        </p>
         <ul className="mt-10 space-y-4">
           {items.map((t) => (
             <li
