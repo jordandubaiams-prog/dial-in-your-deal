@@ -157,7 +157,6 @@ function PayoutProof() {
         <PayoutRail payouts={RAIL_BOTTOM} reverse rowIndex={1} />
       </div>
 
-      </div>
 
       <p className="mt-8 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
         Live Prop Firm Payouts History · Hover to slow down
