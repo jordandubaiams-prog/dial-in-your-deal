@@ -267,8 +267,8 @@ function SocialProof() {
   const stats = [
     { n: "2024", l: "marks the start of helping dozens of traders pass evaluations and secure funded accounts" },
     { n: "$3M+", l: "In combined funded capital through passing evaluation challenges" },
-    { n: "1-on-1", l: "personal guidance from trading experts until you have passed your evaluation challenge and become funded" },
     { n: "14 Days", l: "on average to pass evaluation challenges and get funded" },
+    { n: "1-on-1", l: "dedicated personal guidance until you are funded and can confidently execute our system independently" },
   ];
   return (
     <section className="px-6 py-10 sm:py-14 border-t border-border/40">
