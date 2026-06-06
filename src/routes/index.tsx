@@ -29,8 +29,22 @@ import payout26 from "@/assets/payouts/p26.jpg.asset.json";
 import payout27 from "@/assets/payouts/p27.jpg.asset.json";
 import payout28 from "@/assets/payouts/p28.png.asset.json";
 import payout29 from "@/assets/payouts/p29.jpg.asset.json";
+import payout30 from "@/assets/payouts/p30.jpg.asset.json";
+import payout31 from "@/assets/payouts/p31.jpg.asset.json";
+import payout32 from "@/assets/payouts/p32.jpg.asset.json";
+import payout33 from "@/assets/payouts/p33.jpg.asset.json";
 
-const PAYOUTS: { url: string }[] = [payout1, payout2, payout3, payout4, payout5, payout6, payout7, payout8, payout9, payout10, payout11, payout12, payout13, payout14, payout15, payout16, payout17, payout18, payout19, payout20, payout21, payout22, payout23, payout24, payout25, payout26, payout27, payout28, payout29] as { url: string }[];
+// Curated order: interleave variety so the eye gets a pleasant mix on each rail.
+const ALL_PAYOUTS: { url: string }[] = [
+  payout1, payout11, payout21, payout2, payout12, payout22, payout3, payout13, payout23,
+  payout4, payout14, payout24, payout5, payout15, payout25, payout6, payout16, payout26,
+  payout7, payout17, payout27, payout8, payout18, payout28, payout9, payout19, payout29,
+  payout10, payout20, payout30, payout31, payout32, payout33,
+] as { url: string }[];
+
+// Split into two rails (top and bottom) for opposite-direction marquees.
+const RAIL_TOP = ALL_PAYOUTS.filter((_, i) => i % 2 === 0);
+const RAIL_BOTTOM = ALL_PAYOUTS.filter((_, i) => i % 2 === 1);
 
 const CALENDLY_URL = "https://calendly.com/your-handle/strategy-call";
 
@@ -80,9 +94,48 @@ function Index() {
   );
 }
 
-function PayoutProof() {
+function PayoutRail({
+  payouts,
+  reverse = false,
+  rowIndex,
+}: {
+  payouts: { url: string }[];
+  reverse?: boolean;
+  rowIndex: number;
+}) {
   // Duplicate for seamless loop
-  const items = [...PAYOUTS, ...PAYOUTS];
+  const items = [...payouts, ...payouts];
+  return (
+    <div className="relative">
+      {/* Edge fades */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-40 z-10 bg-gradient-to-r from-navy-deep to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-40 z-10 bg-gradient-to-l from-navy-deep to-transparent" />
+
+      <div className={`${reverse ? "marquee-track-reverse" : "marquee-track"} flex gap-6 w-max py-4`}>
+        {items.map((src, i) => (
+          <figure
+            key={`${rowIndex}-${i}`}
+            className="relative shrink-0 w-[260px] sm:w-[300px] h-[340px] sm:h-[400px] rounded-2xl overflow-hidden border border-gold/30 bg-card shadow-elevated group transition-transform hover:scale-[1.03]"
+          >
+            <img
+              src={src.url}
+              alt={`Verified prop firm payout proof ${(i % payouts.length) + 1}`}
+              loading="lazy"
+              className="absolute inset-0 size-full object-cover object-top"
+            />
+            <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-navy-deep/95 to-transparent" />
+            <figcaption className="absolute bottom-3 left-3 right-3 flex items-center gap-2 text-xs text-foreground/90">
+              <span className="size-2 rounded-full bg-green-400 animate-pulse" />
+              <span className="uppercase tracking-[0.18em] text-gold/90">Verified payout</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function PayoutProof() {
   return (
     <section className="relative px-0 py-16 sm:py-20 border-t border-border/40 overflow-hidden">
       <div className="px-6 text-center mb-10 max-w-3xl mx-auto">
@@ -99,32 +152,11 @@ function PayoutProof() {
         </p>
       </div>
 
-      <div className="relative">
-        {/* Edge fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-40 z-10 bg-gradient-to-r from-navy-deep to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-40 z-10 bg-gradient-to-l from-navy-deep to-transparent" />
-
-        <div className="marquee-track flex gap-6 w-max py-4">
-          {items.map((src, i) => (
-            <figure
-              key={i}
-              className="relative shrink-0 w-[260px] sm:w-[300px] h-[340px] sm:h-[400px] rounded-2xl overflow-hidden border border-gold/30 bg-card shadow-elevated group transition-transform hover:scale-[1.03]"
-            >
-              <img
-                src={src.url}
-                alt={`Verified prop firm payout proof ${(i % PAYOUTS.length) + 1}`}
-                loading="lazy"
-                className="absolute inset-0 size-full object-cover object-top"
-              />
-              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-navy-deep/95 to-transparent" />
-              <figcaption className="absolute bottom-3 left-3 right-3 flex items-center gap-2 text-xs text-foreground/90">
-                <span className="size-2 rounded-full bg-green-400 animate-pulse" />
-                <span className="uppercase tracking-[0.18em] text-gold/90">Verified payout</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+      <div className="space-y-4">
+        <PayoutRail payouts={RAIL_TOP} rowIndex={0} />
+        <PayoutRail payouts={RAIL_BOTTOM} reverse rowIndex={1} />
       </div>
+
 
       <p className="mt-8 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
         Live Prop Firm Payouts History · Hover to slow down
