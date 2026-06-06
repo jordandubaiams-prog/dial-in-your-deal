@@ -256,14 +256,15 @@ function CTAButton({ children }: { children: React.ReactNode }) {
 
 function SocialProof() {
   const stats = [
-    { n: "2024", l: "Since we've been helping traders get funded" },
-    { n: "$3M+", l: "In combined funded capital through passing evaluation challenges." },
+    { n: "2024", l: "marks the start of helping dozens of traders pass evaluations and secure funded accounts" },
+    { n: "$3M+", l: "In combined funded capital through passing evaluation challenges" },
+    { n: "1-on-1", l: "personal guidance from trading experts until you have passed your evaluation challenge and become funded" },
     { n: "14 Days", l: "on average to pass evaluation challenges and get funded" },
   ];
   return (
     <section className="px-6 py-10 sm:py-14 border-t border-border/40">
-      <div className="mx-auto max-w-5xl">
-        <div className="grid gap-8 sm:grid-cols-3 text-center">
+      <div className="mx-auto max-w-6xl">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
           {stats.map((s) => (
             <div key={s.n} className="space-y-2">
               <div className="font-display text-5xl sm:text-6xl text-gradient-gold font-semibold">
