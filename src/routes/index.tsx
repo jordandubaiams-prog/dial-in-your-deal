@@ -20,8 +20,17 @@ import payout17 from "@/assets/payouts/p17.jpg.asset.json";
 import payout18 from "@/assets/payouts/p18.jpg.asset.json";
 import payout19 from "@/assets/payouts/p19.jpg.asset.json";
 import payout20 from "@/assets/payouts/p20.jpg.asset.json";
+import payout21 from "@/assets/payouts/p21.jpg.asset.json";
+import payout22 from "@/assets/payouts/p22.jpg.asset.json";
+import payout23 from "@/assets/payouts/p23.jpg.asset.json";
+import payout24 from "@/assets/payouts/p24.jpg.asset.json";
+import payout25 from "@/assets/payouts/p25.jpg.asset.json";
+import payout26 from "@/assets/payouts/p26.jpg.asset.json";
+import payout27 from "@/assets/payouts/p27.jpg.asset.json";
+import payout28 from "@/assets/payouts/p28.png.asset.json";
+import payout29 from "@/assets/payouts/p29.jpg.asset.json";
 
-const PAYOUTS: { url: string }[] = [payout1, payout2, payout3, payout4, payout5, payout6, payout7, payout8, payout9, payout10, payout11, payout12, payout13, payout14, payout15, payout16, payout17, payout18, payout19, payout20] as { url: string }[];
+const PAYOUTS: { url: string }[] = [payout1, payout2, payout3, payout4, payout5, payout6, payout7, payout8, payout9, payout10, payout11, payout12, payout13, payout14, payout15, payout16, payout17, payout18, payout19, payout20, payout21, payout22, payout23, payout24, payout25, payout26, payout27, payout28, payout29] as { url: string }[];
 
 const CALENDLY_URL = "https://calendly.com/your-handle/strategy-call";
 
