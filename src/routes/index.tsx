@@ -29,8 +29,22 @@ import payout26 from "@/assets/payouts/p26.jpg.asset.json";
 import payout27 from "@/assets/payouts/p27.jpg.asset.json";
 import payout28 from "@/assets/payouts/p28.png.asset.json";
 import payout29 from "@/assets/payouts/p29.jpg.asset.json";
+import payout30 from "@/assets/payouts/p30.jpg.asset.json";
+import payout31 from "@/assets/payouts/p31.jpg.asset.json";
+import payout32 from "@/assets/payouts/p32.jpg.asset.json";
+import payout33 from "@/assets/payouts/p33.jpg.asset.json";
 
-const PAYOUTS: { url: string }[] = [payout1, payout2, payout3, payout4, payout5, payout6, payout7, payout8, payout9, payout10, payout11, payout12, payout13, payout14, payout15, payout16, payout17, payout18, payout19, payout20, payout21, payout22, payout23, payout24, payout25, payout26, payout27, payout28, payout29] as { url: string }[];
+// Curated order: interleave variety so the eye gets a pleasant mix on each rail.
+const ALL_PAYOUTS: { url: string }[] = [
+  payout1, payout11, payout21, payout2, payout12, payout22, payout3, payout13, payout23,
+  payout4, payout14, payout24, payout5, payout15, payout25, payout6, payout16, payout26,
+  payout7, payout17, payout27, payout8, payout18, payout28, payout9, payout19, payout29,
+  payout10, payout20, payout30, payout31, payout32, payout33,
+] as { url: string }[];
+
+// Split into two rails (top and bottom) for opposite-direction marquees.
+const RAIL_TOP = ALL_PAYOUTS.filter((_, i) => i % 2 === 0);
+const RAIL_BOTTOM = ALL_PAYOUTS.filter((_, i) => i % 2 === 1);
 
 const CALENDLY_URL = "https://calendly.com/your-handle/strategy-call";
 
