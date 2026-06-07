@@ -31,38 +31,36 @@ import payout28 from "@/assets/payouts/p28.png.asset.json";
 import payout29 from "@/assets/payouts/p29.jpg.asset.json";
 import payout33 from "@/assets/payouts/p33.jpg.asset.json";
 
-// Rails are strictly grouped by prop firm so all visually similar cards
-// (same logo/colors/layout) sit next to each other. p4, p7, p11, p12, p13
-// each appear only once (duplicates removed). p10 and p29 — the Falcon
-// Funded payouts — are duplicated and placed early for maximum exposure.
+// Rails grouped by prop firm. p10 and p29 appear only once (dedup).
+// p9 (Falcon Funded "Withdrawal Approved") and p28 (FundedNext
+// "Performance Reward") are moved to the bottom rail and duplicated for
+// extended viewer exposure.
 
-// Top rail — Hola Prime block, then Rise block (Falcon Funded gets extra
-// exposure up front), then Challenge Tech and direct confirmations.
+// Top rail — Hola Prime, then Rise family (Holaprime, Falcon Funded, FN,
+// Challenge Tech).
 const RAIL_TOP: { url: string }[] = [
   // Hola Prime withdrawal requests (dark template)
   payout2, payout3, payout1, payout5, payout4,
   // Rise — Holaprime payments
   payout8, payout6, payout7,
-  // Rise — Falcon Funded / FundedNext (largest — extra exposure)
-  payout10, payout29, payout10, payout29,
+  // Rise — Falcon Funded / FundedNext
+  payout10, payout29,
   // Rise — Challenge Technologies FZCO payments
   payout19, payout20, payout17, payout18, payout14, payout16, payout15,
-  // Direct (non-Rise) confirmations
-  payout9, payout28,
 ] as { url: string }[];
 
-// Bottom rail — all FXRK: Reward Approved emails, then Submitted tables,
-// then Payout History tables. Reward emails repeated once for balance.
+// Bottom rail — Falcon Funded + FundedNext confirmations (extra exposure)
+// interleaved with all FXRK proofs.
 const RAIL_BOTTOM: { url: string }[] = [
+  // Falcon Funded + FundedNext (large, prime first slot)
+  payout9, payout28,
   // FXRK reward emails
   payout25, payout27, payout24, payout26, payout23, payout22,
   // FXRK "All Submitted" tables
   payout21, payout33,
-  // FXRK reward emails (second pass for length balance — different order)
-  payout26, payout22, payout25, payout23, payout27, payout24,
-  // FXRK "All Submitted" tables (second pass)
-  payout33, payout21,
-  // FXRK Payout History tables ($13,435.51 totals — unique)
+  // Falcon Funded + FundedNext again (second exposure pass)
+  payout9, payout28,
+  // FXRK Payout History tables ($13,435.51 totals)
   payout11, payout12, payout13,
 ] as { url: string }[];
 
@@ -180,7 +178,7 @@ function PayoutProof() {
 
 
       <p className="mt-8 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-        Live Prop Firm Payouts History · Hover to slow down
+        Live Prop Firm Payouts History · View latest withdrawals
       </p>
     </section>
   );
