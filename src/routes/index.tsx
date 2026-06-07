@@ -34,23 +34,29 @@ import payout31 from "@/assets/payouts/p31.jpg.asset.json";
 import payout32 from "@/assets/payouts/p32.jpg.asset.json";
 import payout33 from "@/assets/payouts/p33.jpg.asset.json";
 
-// Curated rails: hand-tuned order that mixes the four screenshot batches
-// (p1–p10, p11–p20, p21–p29, p30–p33) so each rail shows a balanced
-// variety of layouts/colors as it scrolls, with no two neighbours from
-// the same batch.
+// Rails are grouped by prop firm / payout type so visually similar cards
+// sit next to each other. The largest payouts (p4, p7 — five-figure Hola
+// Prime withdrawals; p11/p12/p13/p30/p31/p32 — FXRK Payout History tables
+// showing $13,435 totals) are duplicated so they get more exposure time
+// as the marquee loops.
+
+// Top rail: Hola Prime withdrawals → Rise/Holaprime → Rise/Challenge Tech
+// → Falcon Funded & FundedNext.
 const RAIL_TOP: { url: string }[] = [
-  payout1, payout12, payout23, payout30,
-  payout5, payout16, payout25, payout31,
-  payout9, payout20, payout27, payout33,
-  payout3, payout14, payout22,
-  payout7, payout18, payout29,
+  payout2, payout3, payout1, payout5, payout4, payout4,
+  payout8, payout6, payout7, payout7,
+  payout14, payout15, payout16, payout17, payout18, payout19, payout20,
+  payout9, payout10, payout29, payout28,
+  payout7, payout4,
 ] as { url: string }[];
 
+// Bottom rail: FXRK family — Reward emails → Submitted tables → Payout
+// History tables (big totals repeated for exposure).
 const RAIL_BOTTOM: { url: string }[] = [
-  payout11, payout21, payout2, payout32,
-  payout15, payout26, payout6, payout19,
-  payout24, payout4, payout17, payout28,
-  payout10, payout13, payout8,
+  payout25, payout24, payout27, payout26, payout23, payout22,
+  payout21, payout33,
+  payout11, payout12, payout30, payout13, payout31, payout32,
+  payout11, payout30,
 ] as { url: string }[];
 
 
