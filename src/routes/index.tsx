@@ -178,7 +178,7 @@ function PayoutProof() {
 
 
       <p className="mt-8 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-        Live Prop Firm Payouts History · Hover to slow down
+        Live Prop Firm Payouts History · View latest withdrawals
       </p>
     </section>
   );
