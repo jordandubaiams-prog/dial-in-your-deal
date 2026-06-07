@@ -189,7 +189,7 @@
 }
 
 .marquee-track-reverse {
-  animation: marquee-x-reverse 140s linear infinite;
+  animation: marquee-x-reverse 120s linear infinite;
   will-change: transform;
 }
 
