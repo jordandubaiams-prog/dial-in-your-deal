@@ -32,38 +32,37 @@ import payout29 from "@/assets/payouts/p29.jpg.asset.json";
 import payout33 from "@/assets/payouts/p33.jpg.asset.json";
 
 // Rails are strictly grouped by prop firm so all visually similar cards
-// (same logo/colors/layout) sit next to each other. The largest payouts
-// are duplicated so they get the most exposure time as the marquee loops:
-//   - p4  ($10,308 Hola Prime withdrawal)
-//   - p7  ($10,767 Rise/Holaprime payout)
-//   - p11 / p12 / p13 (FXRK Payout History — $13,435.51 totals)
+// (same logo/colors/layout) sit next to each other. p4, p7, p11, p12, p13
+// each appear only once (duplicates removed). p10 and p29 — the Falcon
+// Funded payouts — are duplicated and placed early for maximum exposure.
 
-// Top rail — Hola Prime block, then Rise block (all Rise emails together),
-// then standalone Falcon / FundedNext direct payouts.
+// Top rail — Hola Prime block, then Rise block (Falcon Funded gets extra
+// exposure up front), then Challenge Tech and direct confirmations.
 const RAIL_TOP: { url: string }[] = [
   // Hola Prime withdrawal requests (dark template)
-  payout2, payout3, payout1, payout5, payout4, payout4,
+  payout2, payout3, payout1, payout5, payout4,
   // Rise — Holaprime payments
-  payout8, payout6, payout7, payout7,
+  payout8, payout6, payout7,
+  // Rise — Falcon Funded / FundedNext (largest — extra exposure)
+  payout10, payout29, payout10, payout29,
   // Rise — Challenge Technologies FZCO payments
   payout19, payout20, payout17, payout18, payout14, payout16, payout15,
-  // Rise — Falcon Funded / FundedNext payments
-  payout10, payout29,
   // Direct (non-Rise) confirmations
   payout9, payout28,
-  // Extra exposure for the biggest single payouts
-  payout4, payout7,
 ] as { url: string }[];
 
 // Bottom rail — all FXRK: Reward Approved emails, then Submitted tables,
-// then Payout History tables (largest $13,435 totals doubled).
+// then Payout History tables. Reward emails repeated once for balance.
 const RAIL_BOTTOM: { url: string }[] = [
   // FXRK reward emails
   payout25, payout27, payout24, payout26, payout23, payout22,
   // FXRK "All Submitted" tables
   payout21, payout33,
-  // FXRK Payout History tables ($13,435.51 — biggest totals, repeated)
-  payout11, payout12, payout13,
+  // FXRK reward emails (second pass for length balance — different order)
+  payout26, payout22, payout25, payout23, payout27, payout24,
+  // FXRK "All Submitted" tables (second pass)
+  payout33, payout21,
+  // FXRK Payout History tables ($13,435.51 totals — unique)
   payout11, payout12, payout13,
 ] as { url: string }[];
 
