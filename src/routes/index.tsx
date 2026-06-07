@@ -29,34 +29,42 @@ import payout26 from "@/assets/payouts/p26.jpg.asset.json";
 import payout27 from "@/assets/payouts/p27.jpg.asset.json";
 import payout28 from "@/assets/payouts/p28.png.asset.json";
 import payout29 from "@/assets/payouts/p29.jpg.asset.json";
-import payout30 from "@/assets/payouts/p30.jpg.asset.json";
-import payout31 from "@/assets/payouts/p31.jpg.asset.json";
-import payout32 from "@/assets/payouts/p32.jpg.asset.json";
 import payout33 from "@/assets/payouts/p33.jpg.asset.json";
 
-// Rails are grouped by prop firm / payout type so visually similar cards
-// sit next to each other. The largest payouts (p4, p7 — five-figure Hola
-// Prime withdrawals; p11/p12/p13/p30/p31/p32 — FXRK Payout History tables
-// showing $13,435 totals) are duplicated so they get more exposure time
-// as the marquee loops.
+// Rails are strictly grouped by prop firm so all visually similar cards
+// (same logo/colors/layout) sit next to each other. The largest payouts
+// are duplicated so they get the most exposure time as the marquee loops:
+//   - p4  ($10,308 Hola Prime withdrawal)
+//   - p7  ($10,767 Rise/Holaprime payout)
+//   - p11 / p12 / p13 (FXRK Payout History — $13,435.51 totals)
 
-// Top rail: Hola Prime withdrawals → Rise/Holaprime → Rise/Challenge Tech
-// → Falcon Funded & FundedNext.
+// Top rail — Hola Prime block, then Rise block (all Rise emails together),
+// then standalone Falcon / FundedNext direct payouts.
 const RAIL_TOP: { url: string }[] = [
+  // Hola Prime withdrawal requests (dark template)
   payout2, payout3, payout1, payout5, payout4, payout4,
+  // Rise — Holaprime payments
   payout8, payout6, payout7, payout7,
-  payout14, payout15, payout16, payout17, payout18, payout19, payout20,
-  payout9, payout10, payout29, payout28,
-  payout7, payout4,
+  // Rise — Challenge Technologies FZCO payments
+  payout19, payout20, payout17, payout18, payout14, payout16, payout15,
+  // Rise — Falcon Funded / FundedNext payments
+  payout10, payout29,
+  // Direct (non-Rise) confirmations
+  payout9, payout28,
+  // Extra exposure for the biggest single payouts
+  payout4, payout7,
 ] as { url: string }[];
 
-// Bottom rail: FXRK family — Reward emails → Submitted tables → Payout
-// History tables (big totals repeated for exposure).
+// Bottom rail — all FXRK: Reward Approved emails, then Submitted tables,
+// then Payout History tables (largest $13,435 totals doubled).
 const RAIL_BOTTOM: { url: string }[] = [
-  payout25, payout24, payout27, payout26, payout23, payout22,
+  // FXRK reward emails
+  payout25, payout27, payout24, payout26, payout23, payout22,
+  // FXRK "All Submitted" tables
   payout21, payout33,
-  payout11, payout12, payout30, payout13, payout31, payout32,
-  payout11, payout30,
+  // FXRK Payout History tables ($13,435.51 — biggest totals, repeated)
+  payout11, payout12, payout13,
+  payout11, payout12, payout13,
 ] as { url: string }[];
 
 
