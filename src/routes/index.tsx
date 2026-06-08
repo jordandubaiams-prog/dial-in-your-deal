@@ -30,11 +30,19 @@ import payout27 from "@/assets/payouts/p27.jpg.asset.json";
 import payout28 from "@/assets/payouts/p28.png.asset.json";
 import payout29 from "@/assets/payouts/p29.jpg.asset.json";
 import payout33 from "@/assets/payouts/p33.jpg.asset.json";
+import payout34 from "@/assets/payouts/p34.jpg.asset.json";
+import payout35 from "@/assets/payouts/p35.jpg.asset.json";
+import payout36 from "@/assets/payouts/p36.jpg.asset.json";
+import payout37 from "@/assets/payouts/p37.jpg.asset.json";
+import payout38 from "@/assets/payouts/p38.jpg.asset.json";
+import payout39 from "@/assets/payouts/p39.jpg.asset.json";
+import payout40 from "@/assets/payouts/p40.jpg.asset.json";
+import payout41 from "@/assets/payouts/p41.jpg.asset.json";
+import payout42 from "@/assets/payouts/p42.jpg.asset.json";
 
-// Rails grouped by prop firm. p10 and p29 appear only once (dedup).
-// p9 (Falcon Funded "Withdrawal Approved") and p28 (FundedNext
-// "Performance Reward") are moved to the bottom rail and duplicated for
-// extended viewer exposure.
+// Rails grouped by prop firm. Largest payouts get duplicated exposure;
+// smaller payouts (p34–p42) appear once at the tail of the Rise
+// Challenge Tech group for minimum exposure time.
 
 // Top rail — Hola Prime, then Rise family (Holaprime, Falcon Funded, FN,
 // Challenge Tech).
@@ -45,8 +53,10 @@ const RAIL_TOP: { url: string }[] = [
   payout8, payout6, payout7,
   // Rise — Falcon Funded / FundedNext
   payout10, payout29,
-  // Rise — Challenge Technologies FZCO payments
+  // Rise — Challenge Technologies FZCO — large payouts first (more exposure)
   payout19, payout20, payout17, payout18, payout14, payout16, payout15,
+  // Rise — Challenge Technologies FZCO — smaller payouts (least exposure, tail)
+  payout36, payout35, payout41, payout40, payout34, payout37, payout42, payout38, payout39,
 ] as { url: string }[];
 
 // Bottom rail — Falcon Funded + FundedNext confirmations (extra exposure)
