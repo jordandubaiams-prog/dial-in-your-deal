@@ -39,16 +39,25 @@ import payout39 from "@/assets/payouts/p39.jpg.asset.json";
 import payout40 from "@/assets/payouts/p40.jpg.asset.json";
 import payout41 from "@/assets/payouts/p41.jpg.asset.json";
 import payout42 from "@/assets/payouts/p42.jpg.asset.json";
+import payout43 from "@/assets/payouts/p43.jpg.asset.json";
+import payout44 from "@/assets/payouts/p44.jpg.asset.json";
+import payout45 from "@/assets/payouts/p45.jpg.asset.json";
+import payout46 from "@/assets/payouts/p46.jpg.asset.json";
+import payout47 from "@/assets/payouts/p47.jpg.asset.json";
+import payout48 from "@/assets/payouts/p48.jpg.asset.json";
+import payout49 from "@/assets/payouts/p49.jpg.asset.json";
+import payout50 from "@/assets/payouts/p50.jpg.asset.json";
 
-// Rails grouped by prop firm. Largest payouts get duplicated exposure;
-// smaller payouts (p34–p42) appear once at the tail of the Rise
-// Challenge Tech group for minimum exposure time.
+// Rails grouped by prop firm with similar visuals adjacent.
+// Largest payouts duplicated for extended exposure; smaller payouts
+// appear once at the tail of their group for minimum exposure time.
 
-// Top rail — Hola Prime, then Rise family (Holaprime, Falcon Funded, FN,
-// Challenge Tech).
+// Top rail — Hola Prime (dark) → AudaCity (dark→light bridge) → Rise family.
 const RAIL_TOP: { url: string }[] = [
   // Hola Prime withdrawal requests (dark template)
   payout2, payout3, payout1, payout5, payout4,
+  // AudaCity Capital — dark email then light certificate ($372.62, large)
+  payout43, payout44,
   // Rise — Holaprime payments
   payout8, payout6, payout7,
   // Rise — Falcon Funded / FundedNext
@@ -57,20 +66,26 @@ const RAIL_TOP: { url: string }[] = [
   payout19, payout20, payout17, payout18, payout14, payout16, payout15,
   // Rise — Challenge Technologies FZCO — smaller payouts (least exposure, tail)
   payout36, payout35, payout41, payout40, payout34, payout37, payout42, payout38, payout39,
+  // Rise — Challenge Tech (light Rise template variant) at tail
+  payout50,
 ] as { url: string }[];
 
-// Bottom rail — Falcon Funded + FundedNext confirmations (extra exposure)
-// interleaved with all FXRK proofs.
+// Bottom rail — Falcon Funded + FundedNext confirmations interleaved with
+// all FXRK proofs. Largest FXRK reward emails (p46, p45) duplicated.
 const RAIL_BOTTOM: { url: string }[] = [
   // Falcon Funded + FundedNext (large, prime first slot)
   payout9, payout28,
-  // FXRK reward emails
+  // FXRK "Reward Has Been Approved" hero emails — largest first (extra exposure)
+  payout46, payout45,
+  // FXRK reward emails (existing)
   payout25, payout27, payout24, payout26, payout23, payout22,
   // FXRK "All Submitted" tables
   payout21, payout33,
   // Falcon Funded + FundedNext again (second exposure pass)
   payout9, payout28,
-  // FXRK Payout History tables ($13,435.51 totals)
+  // FXRK "Reward Has Been Approved" — largest second pass, then smaller (tail)
+  payout46, payout45, payout49, payout47, payout48,
+  // FXRK Payout History tables ($13,435.51 totals — largest of all)
   payout11, payout12, payout13,
 ] as { url: string }[];
 
